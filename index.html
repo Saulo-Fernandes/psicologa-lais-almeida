@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Laís Almeida — Psicóloga & Palestrante</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#F8F5F0}
+.pg{font-family:'EB Garamond',Georgia,serif;color:#4A3328;background:#F8F5F0;overflow-x:hidden;line-height:1.4}
+.pg *{box-sizing:border-box}
+.pg h1,.pg h2,.pg h3,.pg p{margin:0}
+.pg a{color:inherit;text-decoration:none}
+.pg :focus-visible{outline:3px solid #4A3328;outline-offset:3px}
+.hero{position:relative;min-height:800px;padding:150px 0 0 19%;background:linear-gradient(90deg,#FBEBDD 0%,#F7DEC9 55%,#EFD2BB 100%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:260px;background:linear-gradient(transparent,#F8F5F0)}
+.hero .txt{position:relative;z-index:2;max-width:640px}
+.hero h1{font-size:64px;line-height:1.05;font-weight:600;margin:48px 0 28px;color:#5A4034}
+.hero p{font-size:26px;line-height:1.4;max-width:600px}
+.photo{position:absolute;background:linear-gradient(160deg,#E9C9B2,#C79F86);color:#6B4F40;font-size:15px;display:flex;align-items:flex-end;justify-content:center;padding:14px;text-align:center}
+.cta{display:inline-block;margin-top:36px;padding:17px 48px;border-radius:999px;background:linear-gradient(90deg,#CEA285,#685244);color:#FFF8F1;font-size:15px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;box-shadow:0 4px 8px rgba(70,45,30,.3);transition:box-shadow .2s,opacity .2s}
+.cta:hover{opacity:.92;box-shadow:0 6px 14px rgba(70,45,30,.4)}
+.cta.o{background:none;color:#5A4034;border:1.5px solid #8A6552;box-shadow:none;margin-left:14px}
+.eyebrow{font-size:14px;letter-spacing:.35em;text-transform:uppercase}
+.spec{position:relative;min-height:440px;padding:70px 5% 70px 0}
+.spec .box{margin-left:auto;width:58%;text-align:center}
+.spec h2{font-size:46px;font-weight:400;color:#8A6552}
+.svcs{display:flex;gap:16px;margin-top:26px;text-align:left}
+.svc{flex:1;background:#FBF8F4;border:1px solid #BFA796;border-radius:14px;padding:22px 20px;box-shadow:0 1px 3px rgba(70,45,30,.2);transition:box-shadow .2s}
+.svc:hover{box-shadow:0 5px 12px rgba(70,45,30,.3)}
+.svc b{display:block;font-size:21px;font-weight:600;margin-bottom:6px;color:#5A4034}
+.svc span{font-size:16px;display:block}
+.svc u{display:block;margin-top:12px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#8A6552}
+.ter{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:linear-gradient(120deg,#81624E,#AF8263);color:#FFF4EA}
+.ter .l{padding:90px 6% 90px 19%;display:flex;flex-direction:column;justify-content:center;border-right:1px solid rgba(255,244,234,.3)}
+.ter h2{font-size:46px;font-weight:400;line-height:1.1}
+.ter b{font-weight:600}
+.ter p{font-size:19px;margin-top:20px;max-width:440px}
+.ter .r{padding:60px 6% 60px 60px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+.lab{display:flex;justify-content:space-between;gap:20px;max-width:420px;background:#755445;border-radius:3px;padding:9px 16px;font-size:19px;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.lab.hl{background:#FFF4EA;color:#5A4034;font-weight:600}
+.about{position:relative;min-height:690px;display:grid;grid-template-columns:53% 1fr}
+.about .txt{padding:80px 8% 60px 0}
+.about h2{font-size:42px;font-weight:400;line-height:1.1;margin:12px 0 22px}
+.about h2 span,.cont h2 span{color:#B38B6E}
+.about p{font-size:19px;line-height:1.45;margin-bottom:22px}
+.band{background:#DFB494;padding:14px 20px;text-align:center;font-size:14px;letter-spacing:.6em;text-transform:uppercase;color:#FFF4EA}
+.dep{display:grid;grid-template-columns:53% 1fr;padding:150px 0 90px 19%;align-items:start;position:relative}
+.dep .l{padding-right:5%}
+.dep h2{font-size:42px;font-weight:400;line-height:1.1;margin:12px 0 14px}
+.dep h2 b{font-weight:600;color:#9C7A62}
+.dep .l p{font-size:18px}
+.cards{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;margin-left:-4%;padding:0 5% 10px 0}
+.card{flex:0 0 250px;scroll-snap-align:start;background:#F0C8AE;border-radius:14px;padding:22px;font-size:17px;line-height:1.35;min-height:330px;box-shadow:0 3px 6px rgba(70,45,30,.25);display:flex;flex-direction:column}
+.cover{height:150px;border-radius:8px;background:linear-gradient(160deg,#FBEBDD,#C79F86);color:#6B4F40;font-size:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;margin-bottom:14px}
+.card b{font-size:20px;font-weight:600}
+.card u{margin-top:auto;padding-top:14px;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.cont{position:relative;min-height:780px;display:grid;grid-template-columns:53% 1fr;padding-top:130px}
+.cont h2{font-size:44px;font-weight:400;line-height:1.1;margin:12px 0 28px}
+.cc{display:flex;gap:26px;align-items:center;background:#F4F3F1;border-radius:6px;padding:26px 34px;margin-bottom:24px;max-width:560px;box-shadow:0 3px 6px rgba(70,45,30,.25);transition:box-shadow .2s}
+.cc:hover{box-shadow:0 6px 14px rgba(70,45,30,.35)}
+.cc b{display:block;font-size:19px;font-weight:600;margin-bottom:6px}
+.cc span{font-size:18px}
+.soc{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.soc a{border:1px solid #8A6552;border-radius:999px;padding:8px 22px;font-size:16px;transition:background .2s}
+.soc a:hover{background:#F0C8AE}
+.foot{background:#F0C8AE;text-align:center;padding:70px 20px;font-size:20px;color:#7A5C4B}
+.foot small{display:block;font-size:14px;margin-top:6px}
+html{scroll-behavior:smooth}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateX(50px)}to{opacity:1;transform:none}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.hero .txt>*{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) backwards}
+.hero .txt>*:nth-child(2){animation-delay:.12s}.hero .txt>*:nth-child(3){animation-delay:.24s}.hero .txt>*:nth-child(4){animation-delay:.36s}.hero .txt>*:nth-child(5){animation-delay:.46s}
+.hero>img{animation:heroIn 1.2s cubic-bezier(.2,.7,.2,1) .2s backwards}
+.pg img{transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .5s}
+.pg img:hover{transform:translateY(-10px);filter:drop-shadow(0 18px 20px rgba(70,45,30,.35)) saturate(1.1) brightness(1.03)}
+.cta{position:relative;overflow:hidden;transition:box-shadow .25s,opacity .25s,transform .25s}
+.cta:hover{transform:translateY(-3px)}
+.cta:after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);transition:left .7s}
+.cta:hover:after{left:140%}
+.svc,.card,.cc{transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.svc:hover,.card:hover,.cc:hover{transform:translateY(-7px)}
+.card:hover img{transform:rotate(-2.5deg) translateY(-4px);filter:none}
+.svc u,.card u{transition:letter-spacing .3s}
+.svc:hover u,.card:hover u{letter-spacing:.32em}
+.lab{transition:transform .3s,background .3s}
+.lab:hover{transform:translateX(10px);background:#8A6552}
+.lab.hl:hover{background:#FFF4EA}
+.soc a{transition:transform .25s,background .25s}
+.soc a:hover{transform:translateY(-4px)}
+a[href*="google.com/maps"]{transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+a[href*="google.com/maps"]:hover{transform:translateY(-12px) rotate(-3deg);box-shadow:0 22px 30px rgba(0,0,0,.35)!important}
+.cc svg{transition:transform .4s}
+.cc:hover svg{transform:rotate(-8deg) translateY(-3px)}
+.hero .eyebrow{display:inline-block}
+@supports (animation-timeline:view()){
+.spec .box,.ter .l,.ter .r,.about .txt,.dep .l,.cards,.cont>div:last-child,.band,.foot{animation:fadeUp linear backwards;animation-timeline:view();animation-range:entry 0% entry 45%}
+}
+@media(prefers-reduced-motion:reduce){.pg *,.pg *:after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media(max-width:800px){
+.hero{padding:60px 8% 0;min-height:760px}.hero h1{font-size:42px}.hero p{font-size:20px}.cta.o{margin:14px 0 0}
+.spec{padding:50px 6%}.spec .box{width:100%}.svcs{flex-direction:column}
+.ter,.about,.dep,.cont{grid-template-columns:1fr}.ter .l,.ter .r{padding:50px 8%}
+.about .txt{padding:380px 8% 50px}.dep{padding:70px 8%}.cont{padding:60px 8%}
+.band{letter-spacing:.2em}
+}
+</style>
+</helmet>
+
+<div class="pg">
+
+<section class="hero" id="inicio">
+<img src="./assets/213737c1fa5900aa1e21fa8e6dfc0110.jpg" alt="Laís Almeida sorrindo, sentada, com a mão no rosto" fetchpriority="high" style="position:absolute;right:6%;top:40px;width:36%;height:720px;object-fit:cover;object-position:50% 15%;border-radius:200px 200px 0 0;z-index:0">
+<div class="txt">
+<svg width="200" height="64" viewBox="0 0 200 64" role="img" aria-label="Laís Almeida, Psicóloga &amp; Palestrante" fill="#5A4034"><path d="M83 24 L93 6 L100 18 L107 6 L117 24" fill="none" stroke="#5A4034" stroke-width="3"></path><text x="100" y="48" text-anchor="middle" font-family="EB Garamond,serif" font-size="30">Laís Almeida</text><text x="100" y="62" text-anchor="middle" font-family="EB Garamond,serif" font-size="8.5" letter-spacing="2.5">PSICÓLOGA &amp; PALESTRANTE</text></svg>
+<h1>Saúde mental com acolhimento e conhecimento</h1>
+<p>Atendimento psicológico presencial em Sertãozinho – SP, palestras e ebooks para você cuidar das suas emoções com orientação de quem entende.</p>
+<a class="cta" href="https://tr.ee/NzH0BL52Tz" target="_blank" rel="noopener">Agende sua consulta</a><a class="cta o" href="#ebooks">Ver ebooks</a>
+</div>
+</section>
+
+<section class="spec" id="servicos">
+<img src="./assets/f577f0ce66a2c798083ad16f0f16dcd6.jpg" alt="Retrato de Laís Almeida, psicóloga" style="position:absolute;left:10%;top:60px;width:300px;height:300px;object-fit:cover;object-position:50% 25%;border-radius:24px;box-shadow:0 8px 16px rgba(70,45,30,.25)">
+<div class="box">
+<h2>Como posso te ajudar:</h2>
+<p style="font-size:18px;margin-top:10px">Três formas de cuidar da sua saúde mental: na sessão individual, em palestras para o seu público e nos ebooks para ler no seu tempo.</p>
+<div class="svcs">
+<a class="svc" href="https://tr.ee/NzH0BL52Tz" target="_blank" rel="noopener"><b>Consulta psicológica</b><span>Sessões presenciais em Sertãozinho – SP, com escuta e plano pensados para você.</span><u>Agendar →</u></a>
+<a class="svc" href="https://wa.me/5516993530152?text=Ol%C3%A1%20La%C3%ADs%2C%20quero%20saber%20mais%20sobre%20palestras." target="_blank" rel="noopener"><b>Palestras</b><span>Conversas sobre saúde mental para empresas, escolas e eventos. [TEMAS A CONFIRMAR]</span><u>Convidar →</u></a>
+<a class="svc" href="#ebooks"><b>Ebooks</b><span>Materiais digitais à venda para aprender e praticar no seu ritmo.</span><u>Conhecer →</u></a>
+</div>
+</div>
+</section>
+
+<section class="ter" id="horarios">
+<div class="l">
+<h2>Quando posso<br>te <b>atender</b></h2>
+<p>Atendo de segunda a quarta, das 10h às 18h, e às quintas o atendimento é <b>24 horas</b>. As consultas são marcadas pelo formulário de agendamento: escolha o seu horário e pronto.</p>
+<p style="font-size:16px">R. Antônio Malaquias Pedroso, 1491 · Jardim Santa Isabel, Sertãozinho – SP</p>
+</div>
+<div class="r">
+<span class="lab"><span>Domingo</span><span>Fechado</span></span>
+<span class="lab"><span>Segunda-feira</span><span>10:00–18:00</span></span>
+<span class="lab"><span>Terça-feira</span><span>10:00–18:00</span></span>
+<span class="lab"><span>Quarta-feira</span><span>10:00–18:00</span></span>
+<span class="lab hl"><span>Quinta-feira</span><span>Atendimento 24 horas</span></span>
+<span class="lab"><span>Sexta-feira</span><span>Fechado</span></span>
+<span class="lab"><span>Sábado</span><span>Fechado</span></span>
+</div>
+</section>
+
+<section class="about" id="sobre">
+<div style="position:relative;min-height:690px">
+<div style="position:absolute;left:0;top:90px;width:88%;height:540px;background:#E8C3A9;border-radius:0 14px 14px 0"></div>
+<img src="./assets/c27f4c81141183ab36ab48c12f03f1d0.jpg" alt="Laís Almeida sorrindo enquanto lê o livro Violeta" style="position:absolute;left:0;top:90px;width:26%;height:540px;object-fit:cover;object-position:40% 0%;opacity:.85">
+<img src="./assets/ac02d4f18747a74188bb726ba515eee4.jpg" alt="Laís Almeida palestrando com microfone na mão" style="position:absolute;left:26%;top:20px;width:62%;height:620px;object-fit:cover;object-position:50% 10%;border-radius:60px 60px 0 0">
+</div>
+<div class="txt">
+<div class="eyebrow">Sobre mim</div>
+<h2>Prazer! Sou<br><span>Laís Almeida</span></h2>
+<p>A psicologia me encontrou quando eu também buscava respostas. Descobri que <b>ouvir, acolher e transformar</b> era o meu caminho. Hoje, ajudo outras pessoas a <b>se entenderem, se cuidarem e se fortalecerem</b>.</p>
+<p>Atuo com <b>palestras</b>, conteúdos sobre <b>saúde emocional e desenvolvimento humano</b>. Também sou <b>autora</b> e sigo atendendo com propósito.</p>
+<p style="font-size:24px;font-weight:600;font-style:italic;line-height:1.25;color:#8A6552;border-top:1px solid #BFA796;border-bottom:1px solid #BFA796;padding:16px 0">Cada passo fez sentido. Cada dor virou ferramenta. Cada história virou força.</p>
+<p>Se eu não fosse psicóloga, talvez fosse escritora em tempo integral. Ou dona de uma livraria com café. Aqui você vai me ver estudando, falando com o coração e sempre acreditando na transformação. Acompanhe no <a href="https://instagram.com/lais_almeidapsi" target="_blank" rel="noopener" style="text-decoration:underline">Instagram</a>.</p>
+</div>
+</section>
+
+<div class="band">Psicóloga · Palestrante · Ebooks</div>
+
+<section class="dep" id="ebooks">
+<div class="l">
+<div class="eyebrow">Ebooks</div>
+<h2>Conteúdo para cuidar da <b>saúde mental</b> no seu ritmo</h2>
+<p>Materiais escritos pela Laís, à venda em formato digital, para você ler e aplicar quando e onde quiser.</p>
+<a class="cta" href="https://tr.ee/LrJQurrFop" target="_blank" rel="noopener" style="margin-top:28px">Comprar ebook</a><br><a class="cta o" href="https://chat.whatsapp.com/HTXqeibLOwVEYVbWc697Nf?s=cl&amp;p=i&amp;mlu=2&amp;fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAac_fCIPlYptsBTlSKrjTjYu2IY3QAOKWUymT38e8iBCdUpA7CxOJri3UmuvsA_aem_y4baYGJ5nLvoq8rciciKCg" target="_blank" rel="noopener" style="margin:16px 0 0">Entrar no Clube do Livro Violeta</a>
+</div>
+<div>
+<div class="cards" tabindex="0" aria-label="Ebooks à venda">
+<a class="card" href="https://tr.ee/LrJQurrFop" target="_blank" rel="noopener"><img src="./assets/b66fea8ca3b9885bb73b53a78103625d.jpg" alt="Capa do livro Violeta, de Laís Almeida" style="width:100%;height:240px;object-fit:contain;border-radius:8px;margin-bottom:14px"><b>Violeta</b><span style="font-weight:600;margin-top:8px">R$ 40,00</span><u>Comprar →</u></a>
+<a class="card" href="https://tr.ee/B8_vmMncB7" target="_blank" rel="noopener"><img src="./assets/436df1e13035a653dbbad2a944015c39.jpg" alt="Capa do livro Bem me Quero, de Laís Almeida da Silva" style="width:100%;height:240px;object-fit:contain;border-radius:8px;margin-bottom:14px"><b>Bem me Quero</b><span style="font-weight:600;margin-top:8px">R$ 29,90</span><u>Comprar →</u></a>
+</div>
+</div>
+</section>
+
+<section class="cont" id="contato">
+<div style="position:relative;min-height:620px">
+<div style="position:absolute;left:0;top:80px;width:56%;height:360px;background:#F0C8AE;border-radius:0 14px 14px 0"></div>
+<div style="position:absolute;left:0;top:450px;width:56%;height:90px;background:#E8BFA3;border-radius:0 14px 14px 0"></div>
+<a href="https://www.google.com/maps/search/?api=1&amp;query=R.+Ant%C3%B4nio+Malaquias+Pedroso%2C+1491%2C+Sert%C3%A3ozinho+SP" target="_blank" rel="noopener" aria-label="Abrir o consultório no Google Maps" style="position:absolute;left:29%;top:0;width:190px;height:420px;background:linear-gradient(160deg,#CFE9D3,#B7DCC4);border:7px solid #1B1B1B;border-radius:34px;box-shadow:0 8px 16px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center;font-size:15px;color:#3F5E49;overflow:hidden;padding:0"><svg viewBox="0 0 176 406" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="176" height="406" fill="#EEF1E8"></rect><rect x="14" y="250" width="72" height="62" rx="8" fill="#CFE5C6"></rect><rect x="118" y="40" width="44" height="54" rx="8" fill="#CFE5C6"></rect><path d="M0 335C40 322 84 352 112 382L112 406L0 406Z" fill="#BFDDF0"></path><g stroke="#FFFFFF" stroke-linecap="round" fill="none"><path d="M-10 120L190 152" stroke-width="9"></path><path d="M60 -10L92 420" stroke-width="9"></path><path d="M-10 226L190 204" stroke-width="7"></path><path d="M132 -10L120 320" stroke-width="6"></path><path d="M0 60L176 80M20 300L176 270M150 300L170 420" stroke-width="4"></path></g><path d="M96 202c-14-18-22-28-22-40a22 22 0 0 1 44 0c0 12-8 22-22 40z" fill="#8A3B2E"></path><circle cx="96" cy="162" r="8" fill="#fff"></circle><rect x="14" y="214" width="148" height="42" rx="9" fill="#fff" stroke="#D9C9BD"></rect><text x="88" y="231" text-anchor="middle" font-family="EB Garamond,serif" font-size="12" font-weight="600" fill="#4A3328">Consultório Laís Almeida</text><text x="88" y="245" text-anchor="middle" font-family="EB Garamond,serif" font-size="8" fill="#6B4F40">R. Antônio Malaquias Pedroso, 1491</text></svg></a>
+<p style="position:absolute;left:29%;top:560px;font-size:13px;width:240px">*Clique no mapa para calcular sua rota até o consultório, em Sertãozinho – SP.</p>
+</div>
+<div>
+<div class="eyebrow">Entre em contato</div>
+<h2>Agende agora<br><span>sua consulta</span></h2>
+<a class="cc" href="https://tr.ee/NzH0BL52Tz" target="_blank" rel="noopener">
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#8A6552" stroke-width="2.2" aria-hidden="true"><rect x="7" y="9" width="30" height="28" rx="3"></rect><path d="M7 18h30M15 5v8M29 5v8"></path></svg>
+<div><b>Agende pelo formulário</b><span>Clique aqui, preencha o formulário e escolha o melhor dia e horário para sua consulta</span></div>
+</a>
+<a class="cc" href="https://wa.me/5516993530152" target="_blank" rel="noopener">
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#8A6552" stroke-width="2.2" aria-hidden="true"><path d="M22 6a16 16 0 0 0-14 24l-2 8 8-2a16 16 0 1 0 8-30z"></path><path d="M16 16c0 8 6 14 12 14l2-3-4-2-2 2c-2-1-4-3-5-5l2-2-2-4z"></path></svg>
+<div><b>Outros assuntos pelo WhatsApp</b><span>Palestras, parcerias e dúvidas gerais: (16) 99353-0152. Consultas não são marcadas por aqui.</span></div>
+</a>
+<div class="eyebrow" style="margin:34px 0 12px">Acompanhe nas redes</div>
+<div class="soc"><a href="https://instagram.com/lais_almeidapsi" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/laisalmeidapsi" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/laisalmeidapsi" target="_blank" rel="noopener">Telegram</a><a href="https://www.threads.com/@psicolaisalmeida" target="_blank" rel="noopener">Threads</a></div>
+</div>
+</section>
+
+<footer class="foot">
+<svg width="200" height="64" viewBox="0 0 200 64" role="img" aria-label="Laís Almeida, Psicóloga &amp; Palestrante"><path d="M83 24 L93 6 L100 18 L107 6 L117 24" fill="none" stroke="#5A4034" stroke-width="3"></path><text x="100" y="48" text-anchor="middle" font-family="EB Garamond,serif" font-size="30" fill="#5A4034">Laís Almeida</text><text x="100" y="62" text-anchor="middle" font-family="EB Garamond,serif" font-size="8.5" letter-spacing="2.5" fill="#5A4034">PSICÓLOGA &amp; PALESTRANTE</text></svg>
+<p style="margin-top:34px">R. Antônio Malaquias Pedroso, 1491 - Jardim Santa Isabel, Sertãozinho - SP, 14160-770</p>
+<p style="margin-top:14px;font-size:16px">Seg a qua: 10:00–18:00 · Qui: 24 horas · Sex a dom: fechado · Outros assuntos pelo WhatsApp: (16) 99353-0152</p>
+<p style="margin-top:28px;font-size:15px">© 2026 Laís Almeida | Todos os Direitos Reservados</p>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3720}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
